@@ -2,35 +2,20 @@
 import 'package:flutter/material.dart';
 
 class RatePitch extends StatelessWidget{
-  final double _marginVertical;
-  final double _marginHorizontal;
+
   final int rates ;
 
-  RatePitch(this._marginVertical , this._marginHorizontal, this.rates);
+  RatePitch(this.rates);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      margin: EdgeInsets.symmetric(
-          vertical: _marginVertical,
-          horizontal: _marginHorizontal
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
             child: Row(
             children:
             getAllStar()
           ),
-        ),
-          Icon(Icons.favorite_border)]
-
-        ,
-      ),
-    );
+        );
   }
 
   List<Icon> getStars(){
@@ -47,7 +32,6 @@ class RatePitch extends StatelessWidget{
     List<Icon> stars = getStars();
     List<Icon> nonStars = getNonStar();
     List<Widget> allStars = new List.from(stars)..addAll(nonStars);
-    allStars.add(Text(rates.toString() + ".0" +"999+ Bình luận"));
     return allStars;
   }
 }

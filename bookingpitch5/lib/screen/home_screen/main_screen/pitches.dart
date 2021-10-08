@@ -16,6 +16,6 @@ class Pitches extends StatelessWidget{
 
   List<Pitch> listPitches(){
     return pitchesModel.listPitches.map((pitchModel) => Pitch(pitchModel.id,pitchModel.imgPath,
-        pitchModel.name, pitchModel.location, pitchModel.time, pitchModel.distance)).toList();
+        pitchModel.name, pitchModel.location, pitchModel.time, pitchModel.distance, pitchModel.rates)).toList();
   }
 }

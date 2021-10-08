@@ -1,3 +1,4 @@
+import 'package:bookingpitch5/screen/home_screen/main_screen/rate_pitch.dart';
 import 'package:flutter/material.dart';
 
 class Pitch extends StatelessWidget{
@@ -7,11 +8,13 @@ class Pitch extends StatelessWidget{
   final String _location;
   final String _time;
   final String _distance;
+  final int _rate;
 
   Pitch(this._id,this._imagePath, this._name,
       this._location,
       this._time,
-      this._distance);
+      this._distance,
+      this._rate);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +46,7 @@ class Pitch extends StatelessWidget{
                 child: Row(
                   children: [
                     Icon(Icons.location_on),
-                    Text(_location)
+                    Text(_location),
                   ],
                 ),
               ),
@@ -62,7 +65,8 @@ class Pitch extends StatelessWidget{
                     Text(_distance)
                   ],
                 ),
-              )
+              ),
+          RatePitch(_rate)
             ],
           ),
         ),

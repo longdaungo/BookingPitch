@@ -34,7 +34,7 @@ class Homescreen extends StatelessWidget {
           MyVoucher(20.0, 20.0),
           TitlePitch(20.0, 20.0, "Sân bóng gần đây"),
           SizedBox(
-            height: 200.0,
+            height: 230.0,
             child: Pitches(pitchesModel),
           ),
         ],
