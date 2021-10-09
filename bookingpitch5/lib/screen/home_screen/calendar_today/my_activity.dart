@@ -34,7 +34,7 @@ class CalendarToday extends StatelessWidget {
             ],
           ),
           backgroundColor: Colors.grey[200],
-          bottomNavigationBar: FooterMenu(),
+          bottomNavigationBar: FooterMenu(1),
         )
     );
   }
