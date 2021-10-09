@@ -1,5 +1,7 @@
 
+import 'package:bookingpitch5/screen/home_screen/bill-pitch/main_screen.dart';
 import 'package:bookingpitch5/screen/home_screen/booking_date/main_screen.dart';
+import 'package:bookingpitch5/screen/home_screen/booking_slot/button_pay.dart';
 import 'package:bookingpitch5/screen/home_screen/detail_pitch/detail_pitch.dart';
 import 'package:bookingpitch5/screen/home_screen/profile/profile.dart';
 import 'package:bookingpitch5/screen/home_screen/voucher/voucherTab.dart';
@@ -44,6 +46,9 @@ class RouteGenerator{
       case '/vourcher':
         return MaterialPageRoute(
             builder: (_) => VoucherTab());
+      case '/billPitch':
+        return MaterialPageRoute(
+            builder: (_) => BillPitch(settings.arguments as ParameterToBillPitch));
         default:
         return MaterialPageRoute(builder: (_) => Homescreen());
         }
