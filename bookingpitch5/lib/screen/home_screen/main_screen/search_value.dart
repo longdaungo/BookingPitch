@@ -17,16 +17,16 @@ class SearchValue extends StatelessWidget{
         horizontal: _marginHorizontal
       ),
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: Colors.grey[300],
         borderRadius: BorderRadius.circular(10),
       ),
 
       child: TextField(
         decoration: InputDecoration(
-            icon: Icon(Icons.search),
-            hintText: "Bạn muốn tìm sân bóng nào",
-            hoverColor: Colors.grey,
-
+          hintText: 'Bạn muốn tìm sân bóng nào',
+          prefixIcon: Icon(Icons.search),
+          suffixIcon: Icon(Icons.sports_soccer),
+          hoverColor: Colors.black,
         ),
 
       ),

@@ -23,14 +23,15 @@ class MyVoucher extends StatelessWidget {
                   horizontal: _marginHorizontal
               ),
               decoration: BoxDecoration(
-                color: Colors.grey,
+                color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(10),
               ),
               child:
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Bạn ơi có 4 mã giảm giá chưa xài nè")
+                  Text(" Bạn ơi có 4 mã giảm giá chưa xài nè ", 
+                      style: TextStyle(fontSize: 17, fontStyle: FontStyle.italic),)
                   ,
                   Icon(Icons.arrow_forward_ios)
                 ],

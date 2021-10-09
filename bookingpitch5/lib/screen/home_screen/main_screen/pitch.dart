@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Pitch extends StatelessWidget{
@@ -24,7 +25,7 @@ class Pitch extends StatelessWidget{
         },
         child: Container(
           decoration: BoxDecoration(
-              color: Colors.grey
+              color: Colors.grey[300]
           ),
           margin: EdgeInsets.fromLTRB(
               20.0,0,0.0,0
@@ -33,7 +34,7 @@ class Pitch extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(_imagePath),
-              Text(_name),
+              Text(_name, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
               //ListTile(
               //  leading: Icon(Icons.location_on),
               //   title: Text(_location),

@@ -11,7 +11,7 @@ class ImageBanner extends StatelessWidget{
     // TODO: implement build
     return Container(
       constraints: BoxConstraints.expand(
-        height: 100.0,
+        height: 125.0,
       ),
       decoration: BoxDecoration(color: _color),
       child: Image.asset(_assetPath),

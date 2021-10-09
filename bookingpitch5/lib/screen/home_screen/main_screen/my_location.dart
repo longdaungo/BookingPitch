@@ -25,7 +25,7 @@ class MyLocation extends StatelessWidget{
               ],
             ),
           ),
-          Icon(Icons.favorite_border),
+          Icon(Icons.favorite_outlined, color: Colors.pink[300],),
         ],
       ),
     );
