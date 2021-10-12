@@ -13,17 +13,17 @@ class CalendarToday extends StatelessWidget {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text("Hoạt động của tôi", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+            title: const Text("Hoạt động của tôi", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
             centerTitle: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.green,
             bottom: const TabBar(
               tabs: [
                 Tab(child: Text("Sân đã đặt", style: TextStyle(fontSize: 16))),
                 Tab(child: Text("Lịch sử đặt sân", style: TextStyle(fontSize: 16)))
               ],
-              indicatorColor: Colors.lightGreen,
-              labelColor: Colors.lightGreen,
-              unselectedLabelColor: Colors.grey,
+              indicatorColor: Colors.white,
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.white,
             ),
           ),
           body: const TabBarView(

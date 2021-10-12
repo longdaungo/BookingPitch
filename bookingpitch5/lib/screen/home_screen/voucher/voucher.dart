@@ -18,7 +18,7 @@ class VoucherItem extends StatelessWidget {
               vertical: _marginVertical, horizontal: _marginHorizontal),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
-            color: Color.fromRGBO(129, 178, 20, 1),
+            color: Colors.green,
           ),
           child: Container(
             decoration: BoxDecoration(

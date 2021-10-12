@@ -11,7 +11,7 @@ class VoucherTab extends StatelessWidget {
           appBar: AppBar(
             title: Text('Ví Coupon'),
             centerTitle: true,
-            backgroundColor: Color.fromRGBO(129, 178, 20, 1),
+            backgroundColor: Colors.green,
             bottom: TabBar(
               tabs: [
                 Tab(text: 'Mã cá nhân', icon: Icon(Icons.qr_code)),

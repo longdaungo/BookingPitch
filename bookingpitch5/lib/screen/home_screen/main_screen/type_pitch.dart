@@ -53,7 +53,7 @@ class TypePitch extends StatelessWidget{
               child: Column(
                 children: [
                   Image.asset(_sanfusan),
-                  Text("Sân fusan")
+                  Text("Sân futsal")
                 ],
               ),
             ),

@@ -11,7 +11,7 @@ class _ApplyVoucherPitchState extends State<ApplyVoucherPitch> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: Center(child: Text("Danh sách sân áp dụng")),),
+      appBar: AppBar(title: Center(child: Text("Danh sách sân áp dụng")),backgroundColor:Colors.green),
       body: GroupedListView<dynamic, String>(
         elements: _dataDummy,
         groupBy: (element) => element['group'],
@@ -104,21 +104,21 @@ class _ApplyVoucherPitchState extends State<ApplyVoucherPitch> {
 List _dataDummy = [
   {
     "id": 1,
-    "title": "Sân yêu em",
+    "title": "Sân Đồng Nai",
     "thumbnailUrl": "assets/images/sanbanh1.png",
     "rating": 4.5,
     "group":"Sân 5"
   },
   {
     "id": 2,
-    "title": "Sân vcvl",
+    "title": "Sân Nhà Văn Hóa",
     "thumbnailUrl": "assets/images/sanbanh5.jpg",
     "rating": 4.2,
     "group":"Sân 5"
   },
   {
     "id": 3,
-    "title": "Sân Pass môn",
+    "title": "Sân Vĩnh Hiệp",
     "thumbnailUrl": "assets/images/img2.jpg",
     "rating": 4.8,
     "group":"Sân 7"
