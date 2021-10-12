@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  flutter_rating_bar: ^4.0.0
   flutter:
     sdk: flutter
   table_calendar: ^3.0.2
@@ -32,6 +33,7 @@ dependencies:
 
 dev_dependencies:
   flutter_test:
+
     sdk: flutter
 
 # For information on the generic Dart part of this file, see the

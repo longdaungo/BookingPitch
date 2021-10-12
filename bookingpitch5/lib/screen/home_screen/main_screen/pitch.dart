@@ -28,7 +28,7 @@ class Pitch extends StatelessWidget{
         },
         child: Container(
           decoration: BoxDecoration(
-              color: Colors.grey[300]
+              color: Colors.grey[200]
           ),
           margin: EdgeInsets.fromLTRB(
               20.0,0,0.0,0
@@ -36,8 +36,8 @@ class Pitch extends StatelessWidget{
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(_imagePath),
-              Text(_name, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
+              Image.asset(_imagePath,height: 100.0),
+              Text(_name, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
               //ListTile(
               //  leading: Icon(Icons.location_on),
               //   title: Text(_location),

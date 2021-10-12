@@ -11,8 +11,11 @@ import 'my_voucher.dart';
 import 'title_pitches.dart';
 
 class Homescreen extends StatelessWidget {
+  Homescreen();
+
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     PitchesModel pitchesModel = PitchesModel.fetchAll();
     // TODO: implement build
     return Scaffold(
@@ -39,7 +42,7 @@ class Homescreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: FooterMenu(),
+      bottomNavigationBar: FooterMenu(0),
     );
   }
 }

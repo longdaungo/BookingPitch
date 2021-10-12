@@ -1,45 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+
 class FooterMenu extends StatelessWidget {
-  FooterMenu();
+  int selectedPage;
+
+  FooterMenu(this.selectedPage);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return BottomAppBar(
-        color: Color.fromRGBO(129, 178, 20, 1),
-        child: Container(
-          constraints: BoxConstraints.expand(height: 50.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context)
-                      .pushNamed('/');
-                },
-                child: Icon(Icons.home),
-              )
-              ,
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context)
-                      .pushNamed('/screen.home_screen.calendar_today');
-                },
-                child: Icon(Icons.calendar_today_sharp),
-              ),
-              Icon(Icons.account_balance_wallet_rounded),
-              Icon(Icons.notifications_active),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pushNamed('/account');
-                },
-                child: Icon(Icons.account_circle_rounded),
-              ),
+    return Container(
+        child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            items: [
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.home,
+                    color: selectedPage == 0 ? Colors.green : null,),
+                  title: Text("Trang chủ")),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.fact_check,
+                      color: selectedPage == 1 ? Colors.green : null),
+                  title: Text("Sân đã đặt")),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.account_balance_wallet_rounded),
+                  title: Text("Ví tiền")),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.notifications), title: Text("Thông báo")),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.account_circle_rounded),
+                  title: Text("Tài khoản"))
             ],
-          ),
-        ),
-
-    );
+            onTap: (index) {
+              switch (index) {
+                case 0:
+                  Navigator.of(context).pushNamed('/');
+                  break;
+                case 1:
+                  Navigator.of(context).pushNamed(
+                      '/screen.home_screen.calendar_today');
+                  break;
+                case 2:
+                  Navigator.of(context).pushNamed(
+                      '/wallet');
+                  break;
+                case 3:
+                  break;
+                case 4:
+                  Navigator.of(context).pushNamed('/account');
+                  break;
+              }
+            },
+          currentIndex: selectedPage,
+          selectedItemColor: Colors.green,
+        ));
   }
 }
