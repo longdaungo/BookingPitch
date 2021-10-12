@@ -6,6 +6,7 @@ import 'package:bookingpitch5/screen/home_screen/detail_pitch/detail_pitch.dart'
 import 'package:bookingpitch5/screen/home_screen/location/Location.dart';
 import 'package:bookingpitch5/screen/home_screen/profile/profile.dart';
 import 'package:bookingpitch5/screen/home_screen/rate_pitch/ratingactivity.dart';
+import 'package:bookingpitch5/screen/home_screen/voucher/applyPitches.dart';
 import 'package:bookingpitch5/screen/home_screen/voucher/voucherTab.dart';
 import 'package:bookingpitch5/screen/home_screen/wallet/Wallet.dart';
 import 'package:flutter/cupertino.dart';
@@ -60,6 +61,9 @@ class RouteGenerator{
       case '/wallet':
         return MaterialPageRoute(
             builder: (_) => Wallet());
+      case '/listPitch':
+        return MaterialPageRoute(
+            builder: (_) => ApplyVoucherPitch());
 
         default:
         return MaterialPageRoute(builder: (_) => Homescreen());
