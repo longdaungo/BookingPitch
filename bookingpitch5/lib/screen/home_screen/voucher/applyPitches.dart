@@ -46,7 +46,7 @@ class _ApplyVoucherPitchState extends State<ApplyVoucherPitch> {
               children: [
                 Expanded(child: ClipRRect(
                   child: Image(
-                    image: NetworkImage(element['thumbnailUrl']),
+                    image: AssetImage(element['thumbnailUrl']),
                     fit: BoxFit.cover
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(5)),
@@ -103,30 +103,24 @@ class _ApplyVoucherPitchState extends State<ApplyVoucherPitch> {
 
 List _dataDummy = [
   {
-    "albumId": 1,
     "id": 1,
     "title": "Sân yêu em",
-    "url": "https://via.placeholder.com/600/92c952",
-    "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+    "thumbnailUrl": "assets/images/sanbanh1.png",
     "rating": 4.5,
-    "group":"1"
+    "group":"Sân 5"
   },
   {
-    "albumId": 1,
     "id": 2,
     "title": "Sân vcvl",
-    "url": "https://via.placeholder.com/600/771796",
-    "thumbnailUrl": "https://via.placeholder.com/150/771796",
+    "thumbnailUrl": "assets/images/sanbanh5.jpg",
     "rating": 4.2,
-    "group":"1"
+    "group":"Sân 5"
   },
   {
-    "albumId": 1,
     "id": 3,
     "title": "Sân Pass môn",
-    "url": "https://via.placeholder.com/600/24f355",
-    "thumbnailUrl": "https://via.placeholder.com/150/24f355",
+    "thumbnailUrl": "assets/images/img2.jpg",
     "rating": 4.8,
-    "group":"1"
+    "group":"Sân 7"
   },
 ];
