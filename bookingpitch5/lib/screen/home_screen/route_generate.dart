@@ -36,7 +36,6 @@ class RouteGenerator{
           return MaterialPageRoute(
               builder: (_) => MainScreenBookingSlot(
                 settings.arguments as ParameterToSlotPitch));
-
       case '/account':
       return MaterialPageRoute(
           builder: (_) => ProfilePage());
@@ -51,6 +50,7 @@ class RouteGenerator{
             builder: (_) => BillPitch(settings.arguments as ParameterToBillPitch));
         default:
         return MaterialPageRoute(builder: (_) => Homescreen());
-        }
+      
     }
   }
+}

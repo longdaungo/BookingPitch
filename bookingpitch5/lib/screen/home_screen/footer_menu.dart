@@ -7,7 +7,7 @@ class FooterMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return BottomAppBar(
-        color: Colors.green,
+        color: Color.fromRGBO(129, 178, 20, 1),
         child: Container(
           constraints: BoxConstraints.expand(height: 50.0),
           child: Row(

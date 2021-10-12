@@ -21,8 +21,8 @@ class Homescreen extends StatelessWidget {
         //crossAxisAlignment: CrossAxisAlignment.stretch,
         scrollDirection: Axis.vertical,
         children: [
-          ImageBanner("assets/images/Title.png", Colors.green),
-          MyLocation("603/17 Phạm Văn Chiêu", Colors.green),
+          ImageBanner("assets/images/Title.png", Color.fromRGBO(129, 178, 20, 1)),
+          MyLocation("603/17 Phạm Văn Chiêu", Color.fromRGBO(129, 178, 20, 1)),
           SearchValue(20.0, 20.0),
           TypePitch(
               15.0,

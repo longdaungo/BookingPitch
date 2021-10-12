@@ -34,7 +34,9 @@ class VoucherItem extends StatelessWidget{
             children: [           
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Icon(Icons.sports_soccer_outlined, size: 50,),
+              child: const Image(
+                  image: AssetImage("assets/images/iconBall.png"),
+              ),
             ),           
              Column(
                mainAxisAlignment: MainAxisAlignment.center,

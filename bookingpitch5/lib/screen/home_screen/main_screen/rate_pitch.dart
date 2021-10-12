@@ -20,12 +20,12 @@ class RatePitch extends StatelessWidget{
 
   List<Icon> getStars(){
     return  List<Icon>.generate(rates, (i) => Icon(Icons.star,
-      color: Colors.yellow));
+      color: Colors.yellow[800]));
   }
 
   List<Icon> getNonStar(){
     return  List<Icon>.generate(5-rates, (i) => Icon(Icons.star_border,
-        color: Colors.yellow));
+        color: Colors.yellow[800]));
   }
 
   List<Widget> getAllStar(){
