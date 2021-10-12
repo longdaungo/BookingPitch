@@ -3,8 +3,11 @@ import 'package:bookingpitch5/screen/home_screen/bill-pitch/main_screen.dart';
 import 'package:bookingpitch5/screen/home_screen/booking_date/main_screen.dart';
 import 'package:bookingpitch5/screen/home_screen/booking_slot/button_pay.dart';
 import 'package:bookingpitch5/screen/home_screen/detail_pitch/detail_pitch.dart';
+import 'package:bookingpitch5/screen/home_screen/location/Location.dart';
 import 'package:bookingpitch5/screen/home_screen/profile/profile.dart';
+import 'package:bookingpitch5/screen/home_screen/rate_pitch/ratingactivity.dart';
 import 'package:bookingpitch5/screen/home_screen/voucher/voucherTab.dart';
+import 'package:bookingpitch5/screen/home_screen/wallet/Wallet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -49,6 +52,16 @@ class RouteGenerator{
       case '/billPitch':
         return MaterialPageRoute(
             builder: (_) => BillPitch(settings.arguments as ParameterToBillPitch));
+      case '/ratePitch':
+        return MaterialPageRoute(
+            builder: (_) => RatingScreen());
+      case '/checkLocation':
+        return MaterialPageRoute(
+            builder: (_) => Location());
+      case '/wallet':
+        return MaterialPageRoute(
+            builder: (_) => Wallet());
+
         default:
         return MaterialPageRoute(builder: (_) => Homescreen());
         }

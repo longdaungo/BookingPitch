@@ -9,7 +9,6 @@ class RatingScreen extends StatelessWidget{
       appBar: AppBar(
           title:
             Row(children: [
-              Icon(Icons.close,color: Colors.black,),
               Text('Đánh Giá Sân Bóng',style: TextStyle(color: Colors.black.withOpacity(1)))],
             ),
         backgroundColor: Colors.green,
@@ -92,24 +91,28 @@ class RatingScreen extends StatelessWidget{
             //   style: TextStyle(fontSize: 10.0,fontWeight: FontWeight.bold),
             //   textAlign: TextAlign.right,
             // ),
-            TextField(
-              decoration: InputDecoration(
-                hintText: 'Cùng nhau chia sẻ trải nghiệm đặt sân tại đây với mọi người nhé',
-                hintStyle: TextStyle(
-                  color: Colors.grey, // <-- Change this
-                  fontSize: 10.0,
-                  fontWeight: FontWeight.w400,
-                  fontStyle: FontStyle.normal,
+            Container(
+              margin: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Cùng nhau chia sẻ trải nghiệm đặt sân tại đây với mọi người nhé',
+                  hintStyle: TextStyle(
+                    color: Colors.grey, // <-- Change this
+                    fontSize: 10.0,
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                  ),
+                  border: OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    onPressed: (){},
+                    icon: Icon(Icons.camera_alt),
+                  ),
                 ),
-              border: OutlineInputBorder(),
-                suffixIcon: IconButton(
-                onPressed: (){},
-                icon: Icon(Icons.camera_alt),
-        ),
+                maxLines: 10,
+                maxLength: 500,
               ),
-              maxLines: 10,
-              maxLength: 500,
             )
+
             ],
           )
         ),

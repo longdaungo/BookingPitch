@@ -41,6 +41,8 @@ class FooterMenu extends StatelessWidget {
                       '/screen.home_screen.calendar_today');
                   break;
                 case 2:
+                  Navigator.of(context).pushNamed(
+                      '/wallet');
                   break;
                 case 3:
                   break;

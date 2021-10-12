@@ -73,56 +73,62 @@ class _BookedItemState extends State<BookedItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 10, top: 15, right: 10),
-      margin: const EdgeInsets.only(top: 15),
-      color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+        padding: const EdgeInsets.only(left: 10, top: 15, right: 10),
+        margin: const EdgeInsets.only(top: 15),
+        color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+             Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
                 Text(widget.type, style: const TextStyle(fontWeight: FontWeight.bold)),
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(widget.time, style: const TextStyle(color: Colors.grey)),
-                      const SizedBox(width: 20),
-                      Text(widget.date, style: const TextStyle(color: Colors.grey))
-                    ]
-                )
-              ]
-          ),
-          Row(
-            children: [
-               Image(
-                image: AssetImage(widget.img),
-                width: 100,
-                height: 100,
-              ),
-              Container(
-                margin: const EdgeInsets.only(left: 15),
-                width: 255,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(widget.name, style: const TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 10),
-                    Text(widget.address, maxLines: 3),
-                    const SizedBox(height: 10),
-                    const Text("800,000đ - Tiền mặt"),
-                  ],
+                    Text(widget.time, style: const TextStyle(color: Colors.grey)),
+                    const SizedBox(width: 20),
+                    Text(widget.date, style: const TextStyle(color: Colors.grey))
+                  ]
+              )
+            ]
+        ),
+
+    GestureDetector(
+    onTap:() => Navigator.of(context).pushNamed('/checkLocation'),
+    child:
+    Container(
+    child:
+            Row(
+              children: [
+                Image(
+                  image: AssetImage(widget.img),
+                  width: 100,
+                  height: 100,
                 ),
-              ),
-            ],
-          ),
-          const Divider(color: Colors.black),
-          widget.bottomPart
-        ],
-      ),
-    );
+                Container(
+                  margin: const EdgeInsets.only(left: 15),
+                  width: 255,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(widget.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                      const SizedBox(height: 10),
+                      Text(widget.address, maxLines: 3),
+                      const SizedBox(height: 10),
+                      const Text("800,000đ - Tiền mặt"),
+                    ],
+                  ),
+                ),
+              ],
+            ))),
+            const Divider(color: Colors.black),
+            widget.bottomPart
+          ],
+        ),
+      );
   }
 }
 
@@ -183,7 +189,9 @@ class CompleteBottomPart extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             OutlinedButton(
-              onPressed: () {  },
+              onPressed: () {
+                Navigator.of(context).pushNamed('/ratePitch');
+              },
               child: const Text("Đánh giá", style: TextStyle(fontWeight: FontWeight.bold)),
               style: OutlinedButton.styleFrom(
                 primary: Colors.green,
