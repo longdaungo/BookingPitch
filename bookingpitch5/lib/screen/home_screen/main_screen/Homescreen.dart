@@ -16,7 +16,8 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    PitchesModel pitchesModel = PitchesModel.fetchAll();
+    PitchesModel nearestPitchesModel = PitchesModel.fetchNearestPitch();
+    PitchesModel highestPitchesModel = PitchesModel.fetchHighestRatePitch();
     // TODO: implement build
     return Scaffold(
       body: ListView(
@@ -38,7 +39,12 @@ class Homescreen extends StatelessWidget {
           TitlePitch(20.0, 20.0, "Sân bóng gần đây"),
           SizedBox(
             height: 230.0,
-            child: Pitches(pitchesModel),
+            child: Pitches(nearestPitchesModel),
+          ),
+          TitlePitch(20.0, 20.0, "Sân được đánh giá cao"),
+          SizedBox(
+            height: 230.0,
+            child: Pitches(highestPitchesModel),
           ),
         ],
       ),

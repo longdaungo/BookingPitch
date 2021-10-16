@@ -1,7 +1,7 @@
 
 import 'package:bookingpitch5/screen/home_screen/bill-pitch/main_screen.dart';
+import 'package:bookingpitch5/screen/home_screen/booking_date/button_pay.dart';
 import 'package:bookingpitch5/screen/home_screen/booking_date/main_screen.dart';
-import 'package:bookingpitch5/screen/home_screen/booking_slot/button_pay.dart';
 import 'package:bookingpitch5/screen/home_screen/detail_pitch/detail_pitch.dart';
 import 'package:bookingpitch5/screen/home_screen/location/Location.dart';
 import 'package:bookingpitch5/screen/home_screen/profile/profile.dart';

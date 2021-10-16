@@ -44,7 +44,7 @@ class DetailPitch extends StatelessWidget {
           Container(
             child: Row(
               children: [
-                Text("Ngày đặc biệt: ",
+                Text("Ngày cuối tuần: ",
                     style: TextStyle(fontWeight: FontWeight.bold)),
                 Text(specialDayPrice)
               ],
