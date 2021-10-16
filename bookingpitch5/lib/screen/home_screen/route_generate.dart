@@ -4,6 +4,7 @@ import 'package:bookingpitch5/screen/home_screen/booking_date/button_pay.dart';
 import 'package:bookingpitch5/screen/home_screen/booking_date/main_screen.dart';
 import 'package:bookingpitch5/screen/home_screen/detail_pitch/detail_pitch.dart';
 import 'package:bookingpitch5/screen/home_screen/location/Location.dart';
+import 'package:bookingpitch5/screen/home_screen/login/screens/login.dart';
 import 'package:bookingpitch5/screen/home_screen/profile/profile.dart';
 import 'package:bookingpitch5/screen/home_screen/rate_pitch/ratingactivity.dart';
 import 'package:bookingpitch5/screen/home_screen/voucher/applyPitches.dart';
@@ -21,6 +22,8 @@ class RouteGenerator{
   static Route<dynamic> generateRoute(RouteSettings settings){
     final args = settings.arguments;
     switch(settings.name){
+      case '/login':
+        return MaterialPageRoute(builder: (_) => LogInScreen());
       case '/':
         return MaterialPageRoute(builder: (_) => Homescreen());
 
