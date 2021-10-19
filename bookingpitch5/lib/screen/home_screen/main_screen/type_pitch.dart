@@ -24,6 +24,11 @@ class TypePitch extends StatelessWidget{
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).pushNamed('/listPitch5');
+    } ,
+            child:
             Container(
               child: Column(
                 children: [
@@ -32,6 +37,7 @@ class TypePitch extends StatelessWidget{
                 ],
               ),
             )
+    )
             ,
             Container(
               child: Column(

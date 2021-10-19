@@ -161,6 +161,7 @@ class MainScreenBookingDateState extends State<MainScreenBookingDate> {
       list.add(Wrap(
         children: listSlot,
       ));
+      list.add(ButtonPay(pars , _selectedDay,selectedTimeStart, selectedTimeEnd));
       return list.map((e) => e);
     }
     if(_selectedDay.year == now.year && _selectedDay.month == now.month

@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'booking_slot/main_screen.dart';
 import 'calendar_today/my_activity.dart';
 import 'detail_pitch/main_screen.dart';
+import 'list_pitch/my_activity.dart';
 import 'main_screen/Homescreen.dart';
 
 class RouteGenerator{
@@ -61,9 +62,14 @@ class RouteGenerator{
       case '/wallet':
         return MaterialPageRoute(
             builder: (_) => Wallet());
+
       case '/listPitch':
         return MaterialPageRoute(
             builder: (_) => ApplyVoucherPitch());
+
+      case '/listPitch5':
+        return MaterialPageRoute(
+            builder: (_) => ListPitch());
 
         default:
         return MaterialPageRoute(builder: (_) => Homescreen());

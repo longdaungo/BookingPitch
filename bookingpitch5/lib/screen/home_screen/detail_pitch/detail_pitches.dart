@@ -20,7 +20,7 @@ class DetailPitches extends StatelessWidget{
   List<DetailPitch> listPitches(){
     return detailPitchModel.map((detailPitchModel) => DetailPitch(detailPitchModel.name, detailPitchModel.imgPath,
         detailPitchModel.typePitch,detailPitchModel.normalDayPrice, detailPitchModel.specialDayPrice,detailPitchModel,
-        pitchModel)).toList();
+        pitchModel, detailPitchModel.rates)).toList();
   }
 
 }
