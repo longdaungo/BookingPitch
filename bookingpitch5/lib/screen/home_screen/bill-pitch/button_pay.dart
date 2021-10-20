@@ -16,10 +16,18 @@ class DoneButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             color: Colors.green
         ),
-        child: Center(
-            child: Text("Đặt Sân",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                textAlign: TextAlign.center)),
+
+        child:
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed('/');
+          } ,
+          child:  Center(
+              child: Text("Về trang chủ",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  textAlign: TextAlign.center)),
+        )
+
       );
 
   }

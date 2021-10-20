@@ -23,7 +23,8 @@ class ButtonPay extends StatelessWidget {
             color: Colors.green
         ),
         child: Center(
-            child: Text("Đặt Sân",
+
+            child: Text("Đặt sân",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 textAlign: TextAlign.center)),
       ),

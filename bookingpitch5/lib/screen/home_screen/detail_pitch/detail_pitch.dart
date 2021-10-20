@@ -1,5 +1,6 @@
 import 'package:bookingpitch5/models/detail_type_pitch.dart';
 import 'package:bookingpitch5/models/pitch.dart';
+import 'package:bookingpitch5/screen/home_screen/main_screen/rate_pitch.dart';
 import 'package:flutter/material.dart';
 
 class DetailPitch extends StatelessWidget {
@@ -9,10 +10,11 @@ class DetailPitch extends StatelessWidget {
   final String normalDayPrice;
   final String specialDayPrice;
   final DetailTypePitchModel detailTypePitchModel;
+  final int _rates;
   final PitchModel pitchModel;
 
   DetailPitch(this.name, this.imgPath, this.typePitch, this.normalDayPrice,
-      this.specialDayPrice, this.detailTypePitchModel, this.pitchModel);
+      this.specialDayPrice, this.detailTypePitchModel, this.pitchModel, this._rates);
 
   @override
   Widget build(BuildContext context) {

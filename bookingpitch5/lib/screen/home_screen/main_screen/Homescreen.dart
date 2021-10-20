@@ -1,4 +1,5 @@
 import 'package:bookingpitch5/models/pitches.dart';
+import 'package:bookingpitch5/screen/home_screen/main_screen/hot_deal_pitches.dart';
 import 'package:bookingpitch5/screen/home_screen/main_screen/pitches.dart';
 import 'package:bookingpitch5/screen/home_screen/main_screen/type_pitch.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,6 +19,7 @@ class Homescreen extends StatelessWidget {
     // TODO: implement build
     PitchesModel nearestPitchesModel = PitchesModel.fetchNearestPitch();
     PitchesModel highestPitchesModel = PitchesModel.fetchHighestRatePitch();
+    PitchesModel hotDealPitchesModel = PitchesModel.fetchHotDeal();
     // TODO: implement build
     return Scaffold(
       body: ListView(
@@ -45,6 +47,11 @@ class Homescreen extends StatelessWidget {
           SizedBox(
             height: 230.0,
             child: Pitches(highestPitchesModel),
+          ),
+          TitlePitch(20.0, 20.0, "Sân đang được giảm giá"),
+          SizedBox(
+            height: 300.0,
+            child: HotDealPitches(hotDealPitchesModel),
           ),
         ],
       ),
