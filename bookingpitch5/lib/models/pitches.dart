@@ -46,7 +46,7 @@ class PitchesModel{
               "assets/images/DetailPitch.png",
               "6:00-9:00",
               "2km",
-              4,
+              5,
               4,
               1,
               0,
