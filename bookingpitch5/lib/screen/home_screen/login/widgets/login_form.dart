@@ -12,17 +12,18 @@ class _LogInFormState extends State<LogInForm> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        buildInputForm('Email', false),
-        buildInputForm('Password', true),
+        buildInputForm('yeuemtrondoi@gmail.com','Email', false),
+        buildInputForm('123456789','Password', true),
       ],
     );
   }
 
-  Padding buildInputForm(String label, bool pass) {
+  Padding buildInputForm(String text,String label, bool pass) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 5),
       child: TextFormField(
         obscureText: pass ? _isObscure : false,
+        controller: TextEditingController(text: text),
         decoration: InputDecoration(
             labelText: label,
             labelStyle: TextStyle(
