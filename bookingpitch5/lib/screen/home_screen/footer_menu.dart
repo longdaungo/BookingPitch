@@ -22,9 +22,7 @@ class FooterMenu extends StatelessWidget {
                   icon: Icon(Icons.fact_check,
                       color: selectedPage == 1 ? Colors.green : null),
                   title: Text("Sân đã đặt")),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.account_balance_wallet_rounded),
-                  title: Text("Ví tiền")),
+
               BottomNavigationBarItem(
                   icon: Icon(Icons.notifications), title: Text("Thông báo")),
               BottomNavigationBarItem(
@@ -41,14 +39,11 @@ class FooterMenu extends StatelessWidget {
                       '/screen.home_screen.calendar_today');
                   break;
                 case 2:
-                  Navigator.of(context).pushNamed(
-                      '/wallet');
                   break;
                 case 3:
-                  break;
-                case 4:
                   Navigator.of(context).pushNamed('/account');
                   break;
+
               }
             },
           currentIndex: selectedPage,

@@ -1,5 +1,6 @@
 import 'package:bookingpitch5/screen/home_screen/bill-pitch/button_pay.dart';
 import 'package:bookingpitch5/screen/home_screen/bill-pitch/information_pitch.dart';
+import 'package:bookingpitch5/screen/home_screen/bill-pitch/title_pitches.dart';
 import 'package:bookingpitch5/screen/home_screen/booking_date/button_pay.dart';
 
 import 'package:flutter/material.dart';
@@ -27,7 +28,9 @@ class BillPitch extends StatelessWidget{
     body: ListView(
         scrollDirection: Axis.vertical,
         children: [
+
         ImageBanner(),
+          TitlePitch(),
         InformationPitch(pars.namePitch, pars.address, pars.detailPitch, pars.typeOfPitch, pars.dateBooking,
             pars.timeStartedSeleted, pars.timeEndSeleted, pars.price)
         ]

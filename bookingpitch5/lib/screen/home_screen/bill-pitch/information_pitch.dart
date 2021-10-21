@@ -21,7 +21,7 @@ class InformationPitch extends StatelessWidget{
     return Container(
       margin: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
       decoration: BoxDecoration(
-        color: Colors.grey,
+          color: Colors.grey[200],
         borderRadius: BorderRadius.circular(25.0)
       ),
       child: Column(

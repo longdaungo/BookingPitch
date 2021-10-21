@@ -24,7 +24,7 @@ class DoneButton extends StatelessWidget {
           } ,
           child:  Center(
               child: Text("Về trang chủ",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,color: Colors.white),
                   textAlign: TextAlign.center)),
         )
 
