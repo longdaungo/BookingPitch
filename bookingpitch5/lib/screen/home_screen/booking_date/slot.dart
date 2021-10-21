@@ -51,10 +51,25 @@ class SlotState extends State<Slot> {
                         color: listNumberStart.contains(i)? Colors.green: Colors.grey, size: 70.0),
                     Text(i.toString()+":00 - "+ (i+1).toString()+":00",
                     style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null ),
-                    Text("100,000 đồng",style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null),
+                   // Text("100,000 đồng",style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null),
                   ]))),
         )
          ;
+      list.add(GestureDetector(
+          onTap: () => changeStyle(i),
+          child:  Container(
+              margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+              child:
+              Column(
+                  children: [
+                    Icon(Icons.sports_soccer,
+                        color: listNumberStart.contains(i)? Colors.green: Colors.grey, size: 70.0),
+                    Text("16:00-16:30" ,
+                        style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null ),
+                    //Text("100,000 đồng",style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null),
+                  ]))),
+      );
+
     }
     return list;
   }

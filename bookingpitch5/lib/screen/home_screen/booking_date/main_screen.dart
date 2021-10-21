@@ -16,12 +16,14 @@ class MainScreenBookingDate extends StatefulWidget {
 }
 
 class MainScreenBookingDateState extends State<MainScreenBookingDate> {
-  final timeStarts = ['06:00', "07:00", "08:00"];
+  final timeStarts = ['16:00', "16:30", "17:00","17:30","18:00","18:30", "19:00","19:00","19:30",
+  ];
   List listNumberStart = [];
-  final timeEnds = ['06:00', "07:00", "08:00","23:00"];
+  final timeEnds = [ "16:30", "17:00","17:30","18:00","18:30", "19:00","19:00","19:30",];
 
-  String selectedTimeStart = "6:00";
-  String selectedTimeEnd = "7:00";
+
+  String selectedTimeStart = "16:00";
+  String selectedTimeEnd = "16:30";
   DateTime _focusedDay = DateTime.now();
   DateTime _selectedDay = DateTime(1967, 10, 12);
   ParamenterToDateBookingScreen pars;
@@ -66,59 +68,12 @@ class MainScreenBookingDateState extends State<MainScreenBookingDate> {
                   });
                 }),
 
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //   children:[
-            //     Column(
-            //     children: [
-            //       Text("Thời gian bắt đầu",
-            //           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-            //       Container(
-            //           decoration: BoxDecoration(
-            //               borderRadius: BorderRadius.circular(12),
-            //               border: Border.all(color: Colors.black, width: 1)),
-            //
-            //           child:
-            //           DropdownButton<String>(
-            //             icon: Icon(Icons.arrow_drop_down, color: Colors.black),
-            //             value: timeStart,
-            //             items: timeStarts.map(buildMenuItem).toList(),
-            //             onChanged: (value) {
-            //               if(value == null)
-            //                 return setState(() => timeStart = "06:00");
-            //               return setState(() => timeStart = value);
-            //               }
-            //           ))])
-            //     ,
-            //     Column(
-            //       children: [
-            //         Text("Thời gian kết thúc",
-            //             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-            //         Container(
-            //             decoration: BoxDecoration(
-            //                 borderRadius: BorderRadius.circular(12),
-            //                 border: Border.all(color: Colors.black, width: 1)),
-            //             child:
-            //             DropdownButton<String>(
-            //               icon: Icon(Icons.arrow_drop_down, color: Colors.black),
-            //               value: timeEnd,
-            //               items: timeEnds.map(buildMenuItem).toList(),
-            //               onChanged: (value){
-            //                 if(value == null)
-            //                   return setState(() => timeEnd = "07:00");
-            //                 return setState(() => timeEnd = value);
-            //               }),
-            //         )
-            //       ])
-            //
-            // ]
-            //     )
-            //     ,
+
 
             // GestureDetector(
             //   onTap: (){
             //     Navigator.of(context).pushNamed('/slotBooking',
-            //     arguments: ParameterToSlotPitch(pars, _focusedDay, timeStart, timeEnd));
+            //     arguments: ParameterToSlotPitch(pars, _focusedDay, selectedTimeEnd, selectedTimeEnd));
             //     },
             //   child: Container(
             //     constraints:BoxConstraints.expand(
@@ -157,21 +112,126 @@ class MainScreenBookingDateState extends State<MainScreenBookingDate> {
     DateTime now = DateTime.now();
     if(_selectedDay.compareTo(now) > 0){
       list.add(CalendarContainer(_selectedDay));
-      list.add(LineSlot());
+      list.add(LineSlot("Người khác đã đặt"
+          ));
       list.add(Wrap(
         children: listSlot,
       ));
+      list.add(LineSlot("Thời gian đặt"
+      ));
+      list.add(Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children:[
+            Column(
+                children: [
+                  Text("Thời gian bắt đầu",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.black, width: 1)),
+
+                      child:
+                      DropdownButton<String>(
+                          icon: Icon(Icons.arrow_drop_down, color: Colors.black),
+                          value: selectedTimeStart,
+                          items: timeStarts.map(buildMenuItem).toList(),
+                          onChanged: (value) {
+                            if(value == null)
+                              return setState(() => selectedTimeStart = "06:00");
+                            return setState(() => selectedTimeStart = value);
+                          }
+                      ))])
+            ,
+            Column(
+                children: [
+                  Text("Thời gian kết thúc",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.black, width: 1)),
+                    child:
+                    DropdownButton<String>(
+                        icon: Icon(Icons.arrow_drop_down, color: Colors.black),
+                        value: selectedTimeEnd,
+                        items: timeEnds.map(buildMenuItem).toList(),
+                        onChanged: (value){
+                          if(value == null)
+                            return setState(() => selectedTimeEnd = "07:00");
+                          return setState(() => selectedTimeEnd = value);
+                        }),
+                  )
+                ])
+
+          ]
+      )
+        ,);
+
       list.add(ButtonPay(pars , _selectedDay,selectedTimeStart, selectedTimeEnd));
+
       return list.map((e) => e);
     }
     if(_selectedDay.year == now.year && _selectedDay.month == now.month
     && _selectedDay.day == now.day){
       list.add(CalendarContainer(_selectedDay));
-      list.add(LineSlot());
+      list.add(LineSlot("Người khác đã đặt"));
       list.add(Wrap(
         children: listSlot,
       ));
+      list.add(LineSlot("Thời gian đặt"
+      ));
+      list.add(Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children:[
+            Column(
+                children: [
+                  Text("Thời gian bắt đầu",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.black, width: 1)),
+
+                      child:
+                      DropdownButton<String>(
+                          icon: Icon(Icons.arrow_drop_down, color: Colors.black),
+                          value: selectedTimeStart,
+                          items: timeStarts.map(buildMenuItem).toList(),
+                          onChanged: (value) {
+                            if(value == null)
+                              return setState(() => selectedTimeStart = "06:00");
+                            return setState(() => selectedTimeStart = value);
+                          }
+                      ))])
+            ,
+            Column(
+                children: [
+                  Text("Thời gian kết thúc",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.black, width: 1)),
+                    child:
+                    DropdownButton<String>(
+                        icon: Icon(Icons.arrow_drop_down, color: Colors.black),
+                        value: selectedTimeEnd,
+                        items: timeEnds.map(buildMenuItem).toList(),
+                        onChanged: (value){
+                          if(value == null)
+                            return setState(() => selectedTimeEnd = "07:00");
+                          return setState(() => selectedTimeEnd = value);
+                        }),
+                  )
+                ])
+
+          ]
+      ),
+        );
+
       list.add(ButtonPay(pars , _selectedDay,selectedTimeStart, selectedTimeEnd));
+
       return list.map((e) => e);
     }
     list.add(Container());
@@ -181,8 +241,9 @@ class MainScreenBookingDateState extends State<MainScreenBookingDate> {
   List<Widget> getSlots(){
     List<Widget> list = [];
     var numberStart = 6;
-    var numberEnd = 23;
-    for(int i = numberStart; i < numberEnd ; i++){
+    var numberEnd = 13;
+    var count = 0;
+    for(int i = numberStart; i < numberEnd ; i = numberStart){
       list.add(
         GestureDetector(
             onTap: () => changeStyle(i),
@@ -192,14 +253,26 @@ class MainScreenBookingDateState extends State<MainScreenBookingDate> {
                 Column(
                     children: [
                       Icon(Icons.sports_soccer,
-                          color: listNumberStart.contains(i)? Colors.green: Colors.grey, size: 70.0),
-                      Text(i.toString()+":00 - "+ (i+1).toString()+":00",
+                          color: listNumberStart.contains(i)? Colors.green: Colors.red, size: 70.0),
+                      Text((i+count).toString()+":00 - "+ (i+count+1).toString()+":00",
                           style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null ),
-                      Text("100,000 đồng",style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null),
+                      //Text("100,000 đồng",style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null),
                     ]))),
-      )
-      ;
+      );
+      count ++;
+      numberStart = i+count;
     }
+    list.add(Container(
+        margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
+        child:
+        Column(
+            children: [
+              Icon(Icons.sports_soccer,
+                  color: Colors.red, size: 70.0),
+              Text("16:00 - "+ "17:30",
+                 ),
+              //Text("100,000 đồng",style: listNumberStart.contains(i)?TextStyle(fontWeight: FontWeight.bold): null),
+            ])));
     return list;
   }
 
