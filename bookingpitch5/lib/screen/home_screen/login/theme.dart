@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xFF1B383A);
-const kSecondaryColor = Color(0xFF59706F);
-const kDarkGreyColor = Color(0xFFA8A8A8);
-const kWhiteColor = Color(0xFFFFFFFF);
-const kZambeziColor = Color(0xFF5B5B5B);
-const kBlackColor = Color(0xFF272726);
-const kTextFieldColor = Color(0xFF979797);
+const kPrimaryColor = Color.fromRGBO(18, 92, 19, 1);
+const kSecondaryColor = Color.fromRGBO(62, 124, 23, 1);
+const kDarkGreyColor = Color.fromRGBO(62, 124, 23, 1);
+const kWhiteColor = Colors.white;
+const kZambeziColor = Color.fromRGBO(62, 124, 23, 1);
+const kBlackColor = Color.fromRGBO(62, 124, 23, 1);
+const kTextFieldColor = Color.fromRGBO(62, 124, 23, 1);
 
 const kDefaultPadding = EdgeInsets.symmetric(horizontal: 30);
 
