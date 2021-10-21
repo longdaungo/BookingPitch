@@ -54,7 +54,7 @@ class _NotificationListState extends State<NotificationList> {
             "assets/images/sanbanh7.jpg",
             "Sân Chi Boo",
             "27/311/D To 85 Thống Nhất, Phường 15, Gò Vấp, Thành phố Hồ Chí Minh.",
-            "Đặt sân thành công"),
+            "Đã hủy"),
         ])
     );
   }
