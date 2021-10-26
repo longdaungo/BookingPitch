@@ -138,7 +138,7 @@ class MainScreenBookingDateState extends State<MainScreenBookingDate> {
                           items: timeStarts.map(buildMenuItem).toList(),
                           onChanged: (value) {
                             if(value == null)
-                              return setState(() => selectedTimeStart = "06:00");
+                              return setState(() => selectedTimeStart = "16:00");
                             return setState(() => selectedTimeStart = value);
                           }
                       ))])
@@ -158,7 +158,7 @@ class MainScreenBookingDateState extends State<MainScreenBookingDate> {
                         items: timeEnds.map(buildMenuItem).toList(),
                         onChanged: (value){
                           if(value == null)
-                            return setState(() => selectedTimeEnd = "07:00");
+                            return setState(() => selectedTimeEnd = "16:30");
                           return setState(() => selectedTimeEnd = value);
                         }),
                   )

@@ -20,6 +20,8 @@ class Homescreen extends StatelessWidget {
     PitchesModel nearestPitchesModel = PitchesModel.fetchNearestPitch();
     PitchesModel highestPitchesModel = PitchesModel.fetchHighestRatePitch();
     PitchesModel hotDealPitchesModel = PitchesModel.fetchHotDeal();
+    var pitch1 = nearestPitchesModel.listPitches[0];
+    var detailPitch1 = pitch1.listDetailTypePitch[0];
     // TODO: implement build
     return Scaffold(
       body: ListView(
@@ -51,7 +53,7 @@ class Homescreen extends StatelessWidget {
           TitlePitch(20.0, 20.0, "Sân đang được giảm giá"),
           SizedBox(
             height: 300.0,
-            child: HotDealPitches(hotDealPitchesModel),
+            child: HotDealPitches(hotDealPitchesModel, pitch1, detailPitch1),
           ),
         ],
       ),

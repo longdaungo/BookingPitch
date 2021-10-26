@@ -1,4 +1,7 @@
 
+import 'package:bookingpitch5/models/detail_type_pitch.dart';
+import 'package:bookingpitch5/models/pitch.dart';
+import 'package:bookingpitch5/screen/home_screen/detail_pitch/detail_pitch.dart';
 import 'package:bookingpitch5/screen/home_screen/main_screen/rate_pitch.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +16,8 @@ class HotDealPitch extends StatelessWidget{
   final String _nameDiscount;
   final String normalDayPrice;
   final String _discount;
+  final PitchModel _pitchModel;
+  final DetailTypePitchModel _detailPitchModel;
 
   HotDealPitch(this._id,this._imagePath, this._name,
       this._location,
@@ -21,7 +26,9 @@ class HotDealPitch extends StatelessWidget{
       this._rate,
       this._nameDiscount,
       this._discount,
-      this.normalDayPrice
+      this.normalDayPrice,
+      this._pitchModel,
+      this._detailPitchModel
       );
 
   @override
@@ -30,8 +37,8 @@ class HotDealPitch extends StatelessWidget{
     return
       GestureDetector(
         onTap: (){
-          Navigator.of(context).pushNamed('/second',
-              arguments: _id);
+          Navigator.of(context).pushNamed('/dateBooking',
+              arguments: ParamenterToDateBookingScreen(_pitchModel, _detailPitchModel));
         },
         child: Container(
           decoration: BoxDecoration(
@@ -90,3 +97,4 @@ class HotDealPitch extends StatelessWidget{
       );
   }
 }
+
