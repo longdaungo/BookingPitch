@@ -39,7 +39,13 @@ class Homescreen extends StatelessWidget {
               "assets/images/san7.png",
               "assets/images/san11.png",
               "assets/images/sanfusan.png"),
+             
           MyVoucher(20.0, 20.0),
+          TitlePitch(20.0, 20.0, "Sân đang được giảm giá"),
+          SizedBox(
+            height: 300.0,
+            child: HotDealPitches(hotDealPitchesModel, pitch1, detailPitch1),
+          ),
           TitlePitch(20.0, 20.0, "Sân bóng gần đây"),
           SizedBox(
             height: 230.0,
@@ -50,11 +56,7 @@ class Homescreen extends StatelessWidget {
             height: 230.0,
             child: Pitches(highestPitchesModel),
           ),
-          TitlePitch(20.0, 20.0, "Sân đang được giảm giá"),
-          SizedBox(
-            height: 300.0,
-            child: HotDealPitches(hotDealPitchesModel, pitch1, detailPitch1),
-          ),
+
         ],
       ),
       bottomNavigationBar: FooterMenu(0),
